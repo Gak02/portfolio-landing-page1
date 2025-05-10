@@ -9,11 +9,12 @@ body {
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #eff0f3;
 }
 
 /* ヘッダー */
 header {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 1rem 0;
     position: fixed;
@@ -22,45 +23,323 @@ header {
     z-index: 1000;
 }
 
-/* ヒーローセクション */
-.hero {
-    padding-top: 80px;
-    text-align: center;
-}
-
-.hero img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* 商品セクション */
-.products {
-    padding: 4rem 2rem;
+.container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0d0d0d;
+    text-decoration: none;
+}
+
+/* ナビゲーション */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2a2a2a;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff8e3c;
+}
+
+/* ヒーローセクション */
+.hero {
+    padding-top: 120px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    color: #ff8e3c;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #0d0d0d;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* 特徴セクション */
+.features {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: #0d0d0d;
+    margin-bottom: 1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* 製品セクション */
+.products {
+    padding: 60px 0;
+    background-color: #f8f9fa;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 30px;
+    padding: 0 20px;
 }
 
-.product-item {
-    text-align: center;
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
 }
 
-.product-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #0d0d0d;
+}
+
+.product-price {
+    color: #ff8e3c;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    background-color: #ff8e3c;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ff7b1c;
+    transform: translateY(-2px);
+}
+
+/* お問い合わせフォーム */
+.contact {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 /* フッター */
 footer {
+    background-color: #0d0d0d;
+    color: #fff;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.footer-links h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff8e3c;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     background-color: #333;
     color: #fff;
-    padding: 2rem 0;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #ff8e3c;
+}
+
+.footer-bottom {
     text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    color: #aaa;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .features-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
 } 
